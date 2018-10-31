@@ -1,0 +1,29 @@
+{
+  "name": "fp-oba",
+  "version": "1.0.0",
+  "description": "Dag 1 - Maandag 29 oktober 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliaspoolman/fp-oba.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chalk": "^2.4.1",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "jsonpath": "^1.0.0",
+    "query-string": "^6.2.0",
+    "xml-to-json-promise": "0.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/eliaspoolman/fp-oba/issues"
+  },
+  "homepage": "https://github.com/eliaspoolman/fp-oba#readme"
+}
