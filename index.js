@@ -35,13 +35,31 @@ const obaApi = new api({
   obaApi.get('search', {
     q: 'classification:prentenboek ',
     refine: true,
-    facet: 'pubyear(2017)'
+    librarian: true,
+    facet: 'pubyear(2018)'
   }, 'subjects').then(response => {
 
+    var initialResults = new Array
+    var subjectsResults = new Array
+    // weghalen van onnodig data wrapper
+    initialResults = response.data
+
+    // Onderstaande regel m.b.v. Tim
+    var waarde = initialResults.map(x => x.map(y => Object.values(y)[0][0]._))
+    // Onderstaande regel m.b.v. Titus
+    var platteWaarde = [].concat(...waarde)
+
   // response ends up here
-  console.log(response)
+  console.log(platteWaarde)
 
   // Make server with the response on the port
   app.get('/', (req, res) => res.json(response))
   app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
 })
+
+function getAllSubjects(data) {
+  console.table(data)
+  let keys = Object.keys("_")
+  console.log("Keys: ", keys)
+  return keys
+}
