@@ -4,7 +4,7 @@
   "description": "Dag 1 - Maandag 29 oktober 2018",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --watch index.js"
   },
   "repository": {
     "type": "git",

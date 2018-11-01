@@ -25,10 +25,10 @@ module.exports = class api {
       axios.get(combineUrl)
       .then(response => {
         console.log(chalk.cyan(combineUrl))
-        // XML to Json
+        // XML to JSON
         return convert.xmlDataToJSON(response.data)
       })
-      // Search querey
+      // Search query
       .then (response => {
         return keySearch ? jp.query(response, `$..${keySearch}`) : response
       })
