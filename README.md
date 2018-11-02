@@ -1,6 +1,6 @@
-# fp-oba
+# Functional programming OBA
 
-Dag 1 - Maandag 29 oktober 2018
+## Dag 1 - Maandag 29 oktober 2018
 Eerst doorzocht ik de dataset via de website van de API. Daar haalde ik de volgende interessante content uit:
 - de beschrijvingen van kinderboeken (die waren grappig om te lezen)
 - het aantal pagina's
@@ -22,9 +22,9 @@ Worden bepaalde kookboeken in bepaalde seizoenen meer uitgeleend?
 Helaas kan je niet weten hoe vaak iets is uitgeleend, alleen of het op dit
 moment is uitgeleend en hoeveel exemplaren er zijn van het boek.
 
-Dag 2 - Dinsdag 30 oktober 2018
+## Dag 2 - Dinsdag 30 oktober 2018
 
-Dag 3 - Woensdag 31 oktober 2018
+## Dag 3 - Woensdag 31 oktober 2018
 
 Voorstel van stappenplan (via presentatie van Laurens):
 - Doe een succesvolle request waaruit je JSON haalt
@@ -56,7 +56,7 @@ Ik heb de applicatie vandaag proberen op te zetten en een aantal zoekopdrachten 
 
 Dit komt van de URL: https://zoeken.oba.nl/api/v1/search/?q=classification:prentenboek%20diefstallen&pagesize=10&authorization=1e19898c87464e239192c8bfe422f280&facet=topic(diefstallen)
 
-Dag 4 - Donderdag 1 november 2018
+## Dag 4 - Donderdag 1 november 2018
 
 Vandaag ben ik van plan om mijn onderzoeksvraag uit te werken en deelvragen op te stellen.
 
