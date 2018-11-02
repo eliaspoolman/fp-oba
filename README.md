@@ -344,3 +344,50 @@ En dit in de terminal:
 ```
 
 Wat moet ik toevoegen zodat hier op elke rij een array komt van het onderwerp van het boek?
+
+```
+obaApi.get('search', {
+  q: 'classification:prentenboek ',
+  refine: true,
+  librarian: true,
+  facet: 'pubyear(2018)'
+}, 'subjects').then(response => {
+
+  var initialResults = new Array
+  var subjectsResults = new Array
+  // weghalen van onnodig data wrapper
+  initialResults = response.data
+
+  // Onderstaande regel m.b.v. Tim
+  var waarde = initialResults.map(x => x.map(y => Object.values(y)[0][0]._))
+  // Onderstaande regel m.b.v. Titus
+  var platteWaarde = [].concat(...waarde)
+
+// response ends up here
+console.log(platteWaarde)
+```
+
+Nu hebben we een lijst van onderwerpen:
+
+```
+[ 'Angsten',
+  'Vriendschap',
+  'Anders zijn',
+  'Ridders',
+  'Vooroordelen',
+  'Reizen',
+  'Boosheid',
+  'Eten',
+  'Kalender',
+  'Dinosaurussen',
+  'Fantasiewezens',
+  'Angsten',
+  'Monsters',
+  'Pasen',
+  'Maan',
+  'Zeerovers',
+  'Katten',
+  'Slapengaan',
+  'Delen',
+  'Pasen' ]
+```
