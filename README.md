@@ -196,7 +196,7 @@ Vragen die in me op komen zijn:
 Welke grote categorieën zijn er te vinden op het gebied van onderwerp en stijl?
 Wat is de frequentie waarin alle onderwerpen en stijlen voorkomen?
 
-Het is bijna net zoals wijn. Daar heb je ook grote wijncategorieën en smaakbeschrijvingen. Er is een (grote) categorie als een bepaald type prentenboek heel vaak voorkomt met een bepaalde combinatie aan onderwerpen / stijlen.
+Er is een (grote) categorie als een bepaald type prentenboek heel vaak voorkomt met een bepaalde combinatie aan onderwerpen / stijlen.
 
 Ik twijfel over hoe dit gevisualiseerd moet worden en in hoeverre er patronen kunnen worden gezien.
 
@@ -205,6 +205,7 @@ Hiervoor zijn de volgende dingen nodig: publicatiejaar, onderwerp.
 
 Je maakt een lijst van alle prentenboeken uit een bepaald jaar. Zet daarvan alle onderwerpen in een array met twee waarde onderwerp en count. De 10 onderwerpen die het meest voorkomen zet je in een aparte array.
 
+### Het idee 
 Hoofdvraag: Hoe zijn top 10 meest voorkomende onderwerpen van prentenboeken veranderd in de afgelopen 10 jaar?
 Deelvragen:
 - Wat zijn alle onderwerpen in 2018, 2017, enz.?
