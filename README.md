@@ -93,26 +93,10 @@ obaApi.get('search', {
 }, 'summary').then(response => {
 ```
 
-Sfeervol prentenboek met duidelijke, eenvoudige illustraties in kleur.
-Prentenboek met grote kleurrijke afbeeldingen in waterverf en krijt.
-Sfeervol prentenboek met waterverfillustraties waarop glitterende hologrammen zijn aangebracht.
-Prentenboek met eenvoudige tekeningen in kleur.
-Prentenboek met krachtige illustraties in kleur.
-Prentenboek met sfeervolle zachtgetinte waterverfillustraties.
-Prentenboek met kleurrijke, gedetailleerde zoekplaten vol losse figuren en voorwerpen en diverse zoekopdrachten.
-Prentenboek met sfeervolle aquarellen.
-Hardkartonnen prentenboek met kleurrijke tekeningen en tekst op rijm.
-Prentenboek met paginagrote illustraties in vrolÐke kleuren.
-Prentenboek met grote aquarellen.
-Prentenboek met kleurige illustraties en enkele regels tekst.
-Prentenboek met paginagrote kleurenillustraties in zachte tinten.
-Abc-boek met omkaderde kleurenillustraties uit diverse boeken over Kikker.
-Prentenboek met kleurige illustraties in collagetechniek en een eenvoudig verhaal over de wisseling der seizoenen.
-Hardkartonnen prentenboek met kleurrijke tekeningen en tekst op rijm.
-Prentenboek met grote, eenvoudige illustraties in sobere kleuren.
-Prentenboek met grote illustraties in kleur.
-Prentenboek met zachtgekleurde illustraties.
-Prentenboek met paginagrote kleurenillustraties.
+1. Sfeervol prentenboek met duidelijke, eenvoudige illustraties in kleur.
+2. Prentenboek met grote kleurrijke afbeeldingen in waterverf en krijt.
+3. Sfeervol prentenboek met waterverfillustraties waarop glitterende hologrammen zijn aangebracht.
+4. Prentenboek met eenvoudige tekeningen in kleur.
 
 We kunnen deze zinnen uit de hele samenvatting filteren door middel van de volgende technieken:
 
@@ -120,27 +104,6 @@ We kunnen deze zinnen uit de hele samenvatting filteren door middel van de volge
 - Deze zinnen zijn telkens de voorlaatste zin in de samenvatting, dus herkennen laatste zin en dan de zin ervoor opslaan. De laatste zin is telkens: "Vanaf ca. x jaar"
 
 Vervolgens moet de onnodige tekst uit de zinnen gefilterd worden. Eerst "prentenboek met", "boek met" en "met".
-
-Sfeervol ... duidelijke, eenvoudige illustraties in kleur.
-... grote kleurrijke afbeeldingen in waterverf en krijt.
-Sfeervol ... waterverfillustraties waarop glitterende hologrammen zijn aangebracht.
-... eenvoudige tekeningen in kleur.
-... krachtige illustraties in kleur.
-... sfeervolle zachtgetinte waterverfillustraties.
-... kleurrijke, gedetailleerde zoekplaten vol losse figuren en voorwerpen en diverse zoekopdrachten.
-...sfeervolle aquarellen.
-Hardkartonnen ... kleurrijke tekeningen en tekst op rijm.
-... paginagrote illustraties in vrolÐke kleuren.
-... grote aquarellen.
-... kleurige illustraties en enkele regels tekst.
-... paginagrote kleurenillustraties in zachte tinten.
-... omkaderde kleurenillustraties uit diverse boeken over Kikker.
-... kleurige illustraties in collagetechniek en een eenvoudig verhaal over de wisseling der seizoenen.
-Hardkartonnen ... kleurrijke tekeningen en tekst op rijm.
-... grote, eenvoudige illustraties in sobere kleuren.
-... grote illustraties in kleur.
-... zachtgekleurde illustraties.
-... paginagrote kleurenillustraties.
 
 Daarna leestekens en "stating-the-obvious"-woorden zoals:
 - "in kleur"
@@ -203,30 +166,7 @@ Dit moet leiden tot de volgende classificaties. Daarvoor moeten:
 19. zachtgekleurd | illustraties
 20. paginagroot kleurrijk | illustraties
 
-Een andere optie is de volgende, zonder illustraties / afbeeldingen / tekeningen.
-
-1. sfeervol duidelijk eenvoudig
-2. groot kleurrijk waterverf krijt
-3. sfeervol glitterend hologrammen waterverf
-4. eenvoudig
-5. krachtig
-6. sfeervol zachtgetint waterverf
-7. kleurrijk gedetailleerd
-8. sfeervol aquarellen
-9. kleurrijk
-10. paginagroot vrolijk
-11. groot aquarellen
-12. kleurrijk
-13. paginagroot kleurrijk zachtgetint
-14. omkaderd kleurrijk
-15. kleurrijk collagetechniek
-16. kleurrijk
-17. groot eenvoudig sober
-18. groot
-19. zachtgekleurd
-20. paginagroot kleurrijk
-
-Hierboven staat een beknopte lijst van de stijl van elk prentenboek. Hieronder een lijst van de onderwerpen:
+Lijst met onderwerpen van alle prentenboeken.
 
 1. winter vriendschap
 2. verliefdheid
