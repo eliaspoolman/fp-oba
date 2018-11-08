@@ -205,7 +205,7 @@ Hiervoor zijn de volgende dingen nodig: publicatiejaar, onderwerp.
 
 Je maakt een lijst van alle prentenboeken uit een bepaald jaar. Zet daarvan alle onderwerpen in een array met twee waarde onderwerp en count. De 10 onderwerpen die het meest voorkomen zet je in een aparte array.
 
-### Het idee 
+### Het idee
 Hoofdvraag: Hoe zijn top 10 meest voorkomende onderwerpen van prentenboeken veranderd in de afgelopen 10 jaar?
 Deelvragen:
 - Wat zijn alle onderwerpen in 2018, 2017, enz.?
@@ -332,3 +332,21 @@ Nu hebben we een lijst van onderwerpen:
   'Delen',
   'Pasen' ]
 ```
+
+## Dag 6 - 5 november 2018
+
+Meer gelezen over arrow function en promises.
+
+Begrijp nu hoe je totaal aantal pagina's waar je doorheen moet lopen kan achterhalen.
+
+## Dag 8 - 7 november 2018
+
+Data inladen in Observable
+Data opschonen
+Data sorteren / indelen
+Data in visualisatie zetten
+Datavisualisatie opmaken
+
+Gedaan:
+- meer geleerd over JavaScript callbacks
+- meer geleerd over JavaScript Promises.
