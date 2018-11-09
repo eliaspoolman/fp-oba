@@ -1,3 +1,5 @@
+// Onderstaande code met behulp van Dennis' begincode voor index.js en oba-api.js
+
 require('dotenv').config()
 
 const api = require('./oba-api.js')
@@ -18,60 +20,73 @@ const obaApi = new api({
 // possible parameters: q, librarian, refine, sort etc. check oba api documentation for all
 // possible filterKey: any higher order key in response object, like title returns only title objects instead of full data object
 
-   obaApi.get('search', {
-     q: 'classification:prentenboek ',
-     refine: true,
-     librarian: true,
-     facet: 'pubyear(' + 2018 + ')',
-     page: 1
-   }, 'subjects').then(response => {
+obaApi.get('search', {
+  q: 'classification:prentenboek ',
+  refine: true,
+  librarian: true,
+  facet: 'pubyear(2012)',
+  page: 1
+}, 'subjects').then(response => {
 
-     var initialResults = new Array
-     // weghalen van onnodig data wrapper
-     initialResults = response.data
+  var initialResults = new Array
+  // weghalen van onnodig data wrapper
+  initialResults = response.data
 
-     // Onderstaande regel m.b.v. Tim
-     var waarde = initialResults.map(x => x.map(y => Object.values(y)[0]))
+  // Onderstaande regel m.b.v. Tim
+  var waarde = initialResults.map(x => x.map(y => Object.values(y)[0]))
 
-     var alleOnderwerpen = waarde.map(x => Object.values(x)[0])
+  var alleOnderwerpen = waarde.map(x => Object.values(x)[0])
 
-     // Onderstaande regel m.b.v. Titus
-     var platteWaarde = [].concat(...alleOnderwerpen)
+  // Onderstaande regel m.b.v. Titus
+  var platteWaarde = [].concat(...alleOnderwerpen)
 
-     var platteWaarde = platteWaarde.map(x => x._.toLowerCase())
+  // Maak alle waarden lowercase.
+  var platteWaarde = platteWaarde.map(x => x._.toLowerCase())
 
-     // response ends up here
-     console.log(platteWaarde)
+  //https://wsvincent.com/javascript-remove-duplicates-array/
+  let uniekeOnderwerpen = [...new Set(platteWaarde)];
 
-     //https://wsvincent.com/javascript-remove-duplicates-array/
 
-     let uniekeOnderwerpen = [...new Set(platteWaarde)];
+  var frequentieLijst = uniekeOnderwerpen.map(function(x) {
+    var onderwerpObject = new Object();
+    onderwerpObject.onderwerp = x;
+    onderwerpObject.frequentie = 0;
+    return onderwerpObject;
+  })
 
-     var frequentieLijst = uniekeOnderwerpen.map(function(x) {
-       var onderwerpObject = new Object();
-       onderwerpObject.onderwerp = x;
-       onderwerpObject.frequentie = 0;
-       return onderwerpObject;
-     }
-    )
+  function indexOnderwerp(array, ow) {
+    var index = array.findIndex(onderwerpObject => onderwerpObject.onderwerp === ow);
+    return index;
+  }
 
-    function indexOnderwerp(array, ow) {
-      var index = array.findIndex(onderwerpObject => onderwerpObject.onderwerp === ow);
-      return index;
-    }
+  function verhoogFrequentie(array, index) {
+    array[index].frequentie = array[index].frequentie + 1;
+  }
 
-    function verhoogFrequentie(array, index){
-      array[index].frequentie = array[index].frequentie + 1;
-    }
+  platteWaarde.forEach(function(x) {
+    var index = indexOnderwerp(frequentieLijst, x);
+    verhoogFrequentie(frequentieLijst, index);
+  })
 
-    platteWaarde.forEach(function(x) {
-      var index = indexOnderwerp(frequentieLijst, x);
-      verhoogFrequentie(frequentieLijst, index);
-    })
+  frequentieLijst.sort(function(a, b) {
+    return b.frequentie - a.frequentie;
+  });
 
-    console.log(frequentieLijst)
+  console.log(frequentieLijst)
 
-   // Make server with the response on the port
-   app.get('/', (req, res) => res.json(response))
-   app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
- })
+  // Make server with the response on the port
+  app.get('/', (req, res) => res.json(response))
+  app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
+})
+
+
+// console.log(getAllSubjects(i, 2017))
+//
+// var allSubjectsList = [];
+//
+// for (var i = 1; i < 5; i++) {
+//   var helePagina = getAllSubjects(i, 2017);
+//   allSubjectsList.concat(helePagina);
+// }
+//
+// console.log(allSubjectsList);

@@ -350,3 +350,9 @@ Datavisualisatie opmaken
 Gedaan:
 - meer geleerd over JavaScript callbacks
 - meer geleerd over JavaScript Promises.
+
+## Dag 10  - 9 november 2019
+
+[Observable](https://beta.observablehq.com/@eliaspoolman/variatie-in-onderwerpen-prentenboeken-over-verschillend)
+
+Kan nu van de eerste pagina alle onderwerpen binnenhalen (meerdere per boek) en frequentie bepalen per onderwerp. Vervolgens sorteren op frequentie.
