@@ -1,6 +1,7 @@
 // Onderstaande code met behulp van Dennis' begincode voor index.js en oba-api.js
 
 require('dotenv').config()
+const fs = require('fs')
 
 const api = require('./oba-api.js')
 const chalk = require('chalk');
@@ -73,6 +74,12 @@ obaApi.get('search', {
   });
 
   console.log(frequentieLijst)
+  fs.writeFile('log.json', JSON.stringify(frequentieLijst), (err) => {
+      if (err) throw err;
+      console.log('The file has been saved!');
+  });
+
+
 
   // Make server with the response on the port
   app.get('/', (req, res) => res.json(response))
