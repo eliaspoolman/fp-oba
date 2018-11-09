@@ -14,6 +14,21 @@ const obaApi = new api({
   key: process.env.PUBLIC
 })
 
+// Onderstaande functie door Jesse Dijkman
+function getTotalBooks() {
+  return obaApi.get('search', {
+    q: 'classification:prentenboek',
+    librarian: 'true',
+    refine: 'true',
+    facet: 'pubYear(2009)',
+  })
+  .then(res => {
+    return Math.ceil(res.data.aquabrowser.meta[0].count / 20)
+    // return Math.ceil(JSON.parse(res).data.aquabrowser.meta.count)
+  })
+  .catch(error => console.log(error, 'test'))
+}
+
 // Search for method, params and than optional where you want to find something
 // returns first 20 items
 // obaApi.get(endpoint, params, filterKey)
@@ -25,8 +40,8 @@ obaApi.get('search', {
   q: 'classification:prentenboek ',
   refine: true,
   librarian: true,
-  facet: 'pubyear(2012)',
-  page: 1
+  facet: 'pubyear(2009)',
+  page: 3
 }, 'subjects').then(response => {
 
   var initialResults = new Array
@@ -86,6 +101,7 @@ obaApi.get('search', {
   app.listen(port, () => console.log(chalk.green(`Listening on port ${port}`)))
 })
 
+getTotalBooks();
 
 // console.log(getAllSubjects(i, 2017))
 //
